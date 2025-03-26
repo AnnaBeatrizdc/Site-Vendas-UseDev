@@ -1,0 +1,87 @@
+/* Estilo para a seção de newsletter */
+.newsletter {
+    padding: 40px 12.5%; /* Espaço ao redor do conteúdo da seção */
+    background-color: var(--cor-destaque-secundario); /* Cor de fundo da seção usando uma variável CSS */
+    text-align: center; /* Centraliza o texto dentro da seção */
+    margin: 0 auto; /* Centraliza a seção na página */
+}
+
+/* Estilo para o título da newsletter */
+.newsletter__titulo {
+    color: var(--cor-texto-principal); /* Cor do texto do título usando uma variável CSS */
+    font-family: var(--fonte-titulo); /* Fonte do título usando uma variável CSS */
+    font-size: 31px; /* Tamanho da fonte do título */
+    margin-bottom: 24px; /* Espaço abaixo do título */
+    font-weight: 700; /* Peso da fonte em negrito */
+    line-height: 37.2px; /* Altura da linha do título */
+}
+
+/* Estilo para o texto descritivo da newsletter */
+.newsletter__texto {
+    color: var(--cor-texto-principal); /* Cor do texto descritivo usando uma variável CSS */
+    font-family: var(--fonte-texto); /* Fonte do texto descritivo usando uma variável CSS */
+    font-size: 20px; /* Tamanho da fonte do texto descritivo */
+    margin-bottom: 32px; /* Espaço abaixo do texto descritivo */
+    line-height: 24px; /* Altura da linha do texto descritivo */
+    font-weight: 400; /* Peso da fonte normal */
+}
+
+/* Estilo para o contêiner dos elementos da newsletter */
+.newsletter__container {
+    display: inline-grid; /* Define um layout de grid em linha */
+    width: 60%; /* Largura do contêiner */
+    grid-template-columns: 1fr auto; /* Cria duas colunas: uma que ocupa o espaço restante e outra com largura automática */
+    gap: 16px; /* Espaço entre os elementos do grid */
+}
+
+/* Estilo para o campo de entrada da newsletter */
+.newsletter__container_input {
+    width: 100%; /* O campo de entrada ocupa 100% da largura do contêiner */
+    grid-column: 1; /* O campo de entrada ocupa a primeira coluna do grid */
+    padding: 16px 24px; /* Espaço interno do campo de entrada */
+    border-radius: 32px; /* Bordas arredondadas */
+    background-color: transparent; /* Fundo transparente */
+    border: 2px solid #090129; /* Borda sólida do campo de entrada */
+    font-family: var(--fonte-texto); /* Fonte do campo de entrada usando uma variável CSS */
+    color: var(--cor-texto-principal); /* Cor do texto do campo de entrada usando uma variável CSS */
+    font-size: 20px; /* Tamanho da fonte do campo de entrada */
+    line-height: 24px; /* Altura da linha do campo de entrada */
+    font-weight: 400; /* Peso da fonte normal */
+}
+
+/* Estilo para o placeholder do campo de entrada */
+.newsletter__container_input::placeholder {
+    font-family: var(--fonte-texto); /* Fonte do placeholder usando uma variável CSS */
+    color: var(--cor-texto-principal); /* Cor do texto do placeholder usando uma variável CSS */
+    font-size: 20px; /* Tamanho da fonte do placeholder */
+    line-height: 24px; /* Altura da linha do placeholder */
+    font-weight: 400; /* Peso da fonte normal */
+}
+
+/* Estilo para o botão de envio da newsletter */
+.newsletter__container_botao {
+    grid-column: 2; /* O botão ocupa a segunda coluna do grid */
+    padding: 16px 24px; /* Espaço interno do botão */
+    border-radius: 32px; /* Bordas arredondadas do botão */
+    background-color: var(--cor-fundo-botao); /* Cor de fundo do botão usando uma variável CSS */
+    color: var(--cor-texto); /* Cor do texto do botão usando uma variável CSS */
+    font-family: var(--fonte-texto); /* Fonte do botão usando uma variável CSS */
+    font-size: 20px; /* Tamanho da fonte do botão */
+    line-height: 24px; /* Altura da linha do botão */
+    font-weight: 700; /* Peso da fonte em negrito */
+    border: none; /* Remove a borda padrão do botão */
+    cursor: pointer; /* Muda o cursor para indicar que é clic*/
+}
+
+/* Estilos para telas com largura máxima de 768px */
+@media screen and (max-width: 768px) {
+    /* Estilo para o contêiner da newsletter */
+    .newsletter__container {
+        display: inline; /* Muda o layout do contêiner para inline, permitindo que os elementos fiquem lado a lado */
+    }
+
+    /* Estilo para o campo de entrada da newsletter */
+    .newsletter__container_input {
+        margin-bottom: 16px; /* Adiciona um espaço abaixo do campo de entrada para separá-lo do botão em telas menores */
+    }
+}

@@ -1,0 +1,91 @@
+/* Estilo para a lista de categorias */
+.categorias__list {
+    display: grid; /* Define um layout de grid para a lista de categorias */
+    grid-template-columns: 1fr 1fr 1fr; /* Cria três colunas de igual largura */
+    grid-template-rows: auto auto; /* Define duas linhas que se ajustam automaticamente à altura do conteúdo */
+    grid-template-areas: 
+        "roupas roupas decoracao" /* Define as áreas da grid para os itens */
+        "canecas acessorios acessorios"; /* Define a segunda linha da grid */
+    gap: 24px; /* Espaço de 24 pixels entre os itens da grid */
+    list-style-type: none; /* Remove os marcadores padrão da lista */
+}
+
+/* Estilo para o item de roupas */
+.categorias__list_item-roupas {
+    grid-area: roupas; /* Posiciona este item na área "roupas" da grid */
+}
+
+/* Estilo para o item de decoração */
+.categorias__list_item-decoracao {
+    grid-area: decoracao; /* Posiciona este item na área "decoracao" da grid */
+}
+
+/* Estilo para o item de canecas */
+.categorias__list_item-canecas {
+    grid-area: canecas; /* Posiciona este item na área "canecas" da grid */
+}
+
+/* Estilo para o item de acessórios */
+.categorias__list_item-acessorios {
+    grid-area: acessorios; /* Posiciona este item na área "acessorios" da grid */
+}
+
+/* Estilo para as imagens dentro do contêiner dos itens */
+.categorias__list_item_container img {
+    height: 331px; /* Define a altura da imagem */
+    width: 100%; /* A imagem ocupa 100% da largura do contêiner */
+    object-fit: contain; /* Mantém a proporção da imagem dentro do contêiner */
+}
+
+/* Estilo para o contêiner dos itens da lista */
+.categorias__list_item_container {
+    background-color: var(--cor-links); /* Define a cor de fundo usando uma variável CSS */
+    text-align: center; /* Centraliza o texto dentro do contêiner */
+}
+
+/* Estilo geral para os itens da lista */
+.categorias__list_item {
+    box-shadow: 0px 4px 24px 0px #7B7B7B26; /* Aplica uma sombra ao redor do item para dar profundidade */
+}
+
+/* Estilo para a seção de categorias */
+.categorias {
+    padding: 80px 12.5%; /* Adiciona espaço ao redor da seção */
+}
+
+/* Estilo para o título da seção de categorias */
+.categorias__titulo {
+    font-size: 32px; /* Tamanho da fonte do título */
+    line-height: 39px; /* Altura da linha do título */
+    text-align: center; /* Centraliza o título */
+    font-family: var(--fonte-titulo); /* Define a fonte usando uma variável CSS */
+    color: var(--cor-texto-principal); /* Define a cor do texto usando uma variável CSS */
+    margin-bottom: 40px; /* Espaço abaixo do título */
+}
+
+/* Estilo para o texto descritivo da seção de categorias */
+.categorias__texto {
+    font-size: 25px; /* Tamanho da fonte do texto */
+    line-height: 30px; /* Altura da linha do texto */
+    text-align: center; /* Centraliza o texto */
+    font-family: var(--fonte-texto); /* Define a fonte usando uma variável CSS */
+    color: var(--cor-texto-secundario); /* Define a cor do texto usando uma variável CSS */
+    margin-bottom: 40px; /* Espaço abaixo do texto */
+}
+
+/* Estilo para os títulos dos itens dentro da lista */
+.categorias__list_item_titulo {
+    font-size: 31px; /* Tamanho da fonte do título do item */
+    font-weight: 700; /* Define o peso da fonte como negrito */
+    line-height: 37.2px; /* Altura da linha do título do item */
+    font-family: var(--fonte-texto); /* Define a fonte usando uma variável CSS */
+    color: var(--cor-texto-principal); /* Define a cor do texto usando uma variável CSS */
+    padding: 16px 0; /* Espaço acima e abaixo do título */
+    text-align: center; /* Centraliza o título do item */
+}
+
+@media screen and (max-width: 768px) {
+    .categorias {
+        padding: 80px 38px;
+    }
+}

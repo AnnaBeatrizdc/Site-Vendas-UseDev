@@ -1,0 +1,133 @@
+/* Estilo para a linha do rodapé */
+.rodape__linha {
+    display: grid; /* Define um layout de grid para a linha do rodapé */
+    grid-template-columns: repeat(4, auto); /* Cria quatro colunas de largura automática */
+    justify-content: space-between; /* Distribui o espaço entre as colunas */
+    margin-bottom: 32px; /* Espaço abaixo da linha do rodapé */
+}
+
+/* Estilo para a última linha do rodapé */
+.rodape__linha:last-child {
+    border-top: 1.5px solid var(--cor-destaque-secundario); /* Adiciona uma borda superior */
+    padding-top: 32px; /* Espaço acima do conteúdo da última linha */
+    display: grid; /* Mantém o layout de grid */
+    grid-template-columns: repeat(2, auto); /* Cria duas colunas de largura automática */
+    justify-content: space-between; /* Distribui o espaço entre as colunas */
+}
+
+/* Estilo para a lista de cartões na coluna do rodapé */
+.rodape__coluna_list-cartao {
+    display: inline-grid; /* Define um layout de grid em linha */
+    grid-template-columns: repeat(5, auto); /* Cria cinco colunas de largura automática */
+    gap: 16px; /* Espaço entre os itens da lista */
+    list-style-type: none; /* Remove os marcadores da lista */
+}
+
+/* Estilo para a lista de redes sociais na coluna do rodapé */
+.rodape__coluna_list-redes-sociais {
+    display: inline-grid; /* Define um layout de grid em linha */
+    grid-template-columns: repeat(3, auto); /* Cria três colunas de largura automática */
+    gap: 16px; /* Espaço entre os itens da lista */
+    list-style-type: none; /* Remove os marcadores da lista */
+}
+
+/* Estilo geral para o rodapé */
+.rodape {
+    padding: 60px 12.5%; /* Espaço ao redor do conteúdo do rodapé */
+    background-color: var(--cor-texto-principal); /* Cor de fundo do rodapé */
+    margin: 0 auto; /* Centraliza o rodapé na página */
+}
+
+/* Estilo para os títulos das colunas do rodapé */
+.rodape__coluna_titulo {
+    font-family: var(--fonte-texto); /* Fonte do título */
+    font-weight: 700; /* Peso da fonte em negrito */
+    font-size: 20px; /* Tamanho da fonte do título */
+    color: var(--cor-texto); /* Cor do texto do título */
+    line-height: 24px; /* Altura da linha do título */
+    margin-bottom: 16px; /* Espaço abaixo do título */
+}
+
+/* Estilo para o logotipo na coluna do rodapé */
+.rodape__coluna_logo img {
+    width: 78.61px; /* Largura da imagem do logotipo */
+    height: 48px; /* Altura da imagem do logotipo */
+}
+
+/* Estilo para o texto abaixo do logotipo */
+.rodape__coluna_logo_texto {
+    font-family: var(--fonte-texto); /* Fonte do texto */
+    font-weight: 400; /* Peso da fonte normal */
+    font-size: 16px; /* Tamanho da fonte do texto */
+    color: var(--cor-destaque-secundario); /* Cor do texto */
+    line-height: 19.2px; /* Altura da linha do texto */
+}
+
+/* Estilo para a lista de itens na coluna do rodapé */
+.rodape__coluna_list {
+    list-style-type: none; /* Remove os marcadores da lista */
+    color: var(--cor-texto); /* Cor do texto da lista */
+    font-family: var(--fonte-texto); /* Fonte do texto da lista */
+    font-size: 16px; /* Tamanho da fonte da lista */
+    line-height: 19.2px; /* Altura da linha da lista */
+}
+
+/* Estilo para os links dentro dos itens da lista */
+.rodape__coluna_list_item a {
+    color: var(--cor-texto); /* Cor do texto do link */
+    text-decoration: none; /* Remove o sublinhado do link */
+}
+
+/* Estilo para os itens da lista na coluna do rodapé */
+.rodape__coluna_list_item {
+    margin-bottom: 8px; /* Espaço abaixo de cada item da lista */
+}
+
+/* Remove o espaço abaixo do último item da lista */
+.rodape__coluna_list_item:last-child {
+    margin-bottom:0;
+}
+
+/* Estilos para telas com largura máxima de 768px */
+@media screen and (max-width: 768px) {
+    /* Estilo para a primeira linha do rodapé */
+    .rodape__linha:first-child {
+        display: grid; /* Define um layout de grid para a linha */
+        grid-template-areas: /* Define as áreas da grid */
+            "logo logo logo" /* A área do logotipo ocupa três colunas */
+            "funcionamento institucional informacoes"; /* As áreas de funcionamento, institucional e informações ocupam uma linha */
+        justify-content: space-between; /* Distribui o espaço entre as áreas */
+        column-gap: 68px; /* Espaço entre as colunas */
+    }
+
+    /* Estilo para a segunda coluna da primeira linha */
+    .rodape__linha:first-child .rodape__coluna:nth-child(2) {
+        grid-area: funcionamento; /* Define a área da coluna como "funcionamento" */
+        margin-bottom: 24px; /* Espaço abaixo da coluna */
+    }
+
+    /* Estilo para a terceira coluna da primeira linha */
+    .rodape__linha:first-child .rodape__coluna:nth-child(3) {
+        grid-area: institucional; /* Define a área da coluna como "institucional" */
+    }
+
+    /* Estilo para a quarta coluna da primeira linha */
+    .rodape__linha:first-child .rodape__coluna:nth-child(4) {
+        grid-area: informacoes; /* Define a área da coluna como "informacoes" */
+    }
+
+    /* Estilo para a coluna do logotipo na primeira linha */
+    .rodape__linha:first-child .rodape__coluna_logo {
+        grid-area: logo; /* Define a área da coluna como "logo" */
+        text-align: center; /* Centraliza o texto dentro da coluna */
+        margin-bottom: 40px; /* Espaço abaixo da coluna */
+        padding-bottom: 40px; /* Espaço abaixo do conteúdo da coluna */
+        border-bottom: 1.5px solid var(--cor-destaque-secundario); /* Adiciona uma borda inferior */
+    }
+
+    /* Estilo para a última linha do rodapé */
+    .rodape__linha:last-child {
+        border-top: none; /* Remove a borda superior */
+        padding-top: 32px; /* Espaço acima do conteúdo da última linha */
+    }
+}
