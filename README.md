@@ -1,5 +1,4 @@
 
-![CSS Grid](https://imgur.com/KfurviO.png)
 
 # CSS Grid
 
@@ -25,9 +24,6 @@ As técnicas e tecnologias utilizadas pra isso são:
     - `Align Content`: Alinhamento dos itens na direção vertical.
     - `Grid Areas`: Nomeação de áreas específicas do grid para layout personalizado.
 
-## 📁 Acesso ao projeto
-
-Você pode [acessar o código fonte do projeto inicial](https://github.com/monicahillman/3992-css-grid/tree/projeto-base) ou [baixá-lo](https://github.com/monicahillman/3992-css-grid/archive/refs/heads/projeto-base.zip).
 
 ## 🛠️ Abrir e rodar o projeto
 
